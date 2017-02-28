@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Style Blog</title>
+<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet">
+<h1> The Style Blog </h1>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<nav>
+<li>
+<a href="#">About</a>
+<a href="#">Contact</a>
+<a href="#">Watches</a>
+</li>
+</nav>
+
+<!-- <main>
+    <section>Content 1</section>
+    <section>Content 2</section>
+    <section>Content 3</section>
+  </main> -->
+
+
+
+<aside class ="ads">Ads go here.</aside>
+
+
+
+
+
+
+
+
+<%= yield %>
+
+ </body>
+</html>
+<footer id="main footer">
+<p class="copyright">&copy2017 Style blog</p>
+  <a href="https://twitter.com/ciscocaballero" class="twitter-follow-button" data-show-count="false">Follow @ciscocaballero</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <style>.ig-b- { display: inline-block; }
+.ig-b- img { visibility: hidden; }
+.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+.ig-b-32 { width: 32px; height: 32px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-32.png) no-repeat 0 0; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+.ig-b-32 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-32@2x.png); background-size: 60px 178px; } }</style>
+<a href="https://www.instagram.com/ciscocaballero/?ref=badge" class="ig-b- ig-b-32"><img src="//badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" /></a>
+
+<a href="https://twitter.com/dappered" target="_blank"><img src="https://www.google.com/search?q=twitter+badge&espv=2&biw=945&bih=693&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiL6c6YhbHSAhWJKWMKHQA5AqUQ_AUIBigB#tbm=isch&q=new+twitter+badge&*&imgrc=GXPhWFxM5SBARM:"></a>
+
+
+
+</footer
+>
