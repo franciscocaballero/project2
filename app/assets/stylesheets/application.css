@@ -1,5 +1,5 @@
 
-h1 {
+#homelink {
   font-family: 'Mr Dafoe', cursive;
   font-size: 60px;
   border-bottom: 1px solid black;
@@ -35,7 +35,7 @@ section {
 }*/
 
 a{
-  color: white;
+  color: black;
   font-family: system-ui;
   font-size: 20px;
 }

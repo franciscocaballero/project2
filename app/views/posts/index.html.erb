@@ -1,6 +1,11 @@
 <h2>THE STYLE BLOG!</h2>
-<main>
-    <section>Content 1</section>
-    <section>Content 2</section>
-    <section>Content 3</section>
-  </main>
+
+<div class="col-2 homepage_content">
+<hr>
+
+
+<% @posts.each do |post| %>
+<h3><a href="#"><%= link_to post.title, post %></a></h3>
+<p class="date"><%= post.created_at.strftime("%A, %b %%d") %></p>
+<% end %>
+</div>
