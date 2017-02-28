@@ -1,6 +1,30 @@
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+  <header>
+
+<h1><%= @post.title %></h1>
+<hr>
+</header>
+<div id="content">
+  <%= @post.content %>
+</div>
+
+
+<hr>
+
+<!-- <div id="share_box">
+  <p>Share This</p>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+</div> -->
+
+<hr>
+
 <%= @post.title %><br>
 <%= @post.content %>
-<%= image_tag @post.image.url(:medium) %>
+<%= image_tag @post.image.url(:large) %>
+
 <br>
 <br>
 
