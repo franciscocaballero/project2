@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+
     <title>Style Blog</title>
 <link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet">
     <%= csrf_meta_tags %>
@@ -9,9 +11,21 @@
   </head>
 
   <body>
+<% if notice %>
+<%= notice %>
+<% end %>
+<% if alert %>
+<%= alert %>
+<% end %>
 
   <h1><a id="homelink" href="/posts"> The Style Blog </a></h1>
 </header>
+<% if notice %>
+<p class="notice"><%= notice %></p>
+<% elsif alert %>
+
+<p class="alert"><%= alert %></p>
+<% end %>
 <nav>
 <a href="#">About</a>
 <a href="#">Contact</a>
@@ -19,7 +33,19 @@
 </nav>
 
 
-<aside class ="ads">Ads go here.</aside>
+<div id="newsletter">
+<h2>NEWSLETTER</h2>
+<% if cookies[:saved_lead] %>
+Thanks for signing up!
+<% else %>
+<%= form_for Email.new do |f| %>
+  <%= f.email_field :email, placeholder: "Email" %>
+  <%= f.submit %>
+  <% end %>
+  <% end %>
+</div>
+
+
 <article>
 <%= yield %>
 </article>

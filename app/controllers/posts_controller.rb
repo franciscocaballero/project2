@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user! except: [:index, :show]
   def index
     @posts = Post.all.limit(8).order("created_at desc")
+    @email = Email.new
   end
 
   def new
