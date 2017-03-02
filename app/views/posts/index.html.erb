@@ -2,10 +2,16 @@
 
 
 <% @posts.each do |post| %>
-  <div id= "article">
+<div class="column-layout">
+  <div id= "main- column">
     <%= image_tag post.image.url(:large) %>
-
+<div class = "post-title">
     <h2><a href="#"><%= link_to post.title, post %></a></h2>
-    <p class="date"><%= post.created_at.strftime("%A, %B %D") %></p>
+<div class = "menswear">
+<p> MENSWEAR 101 </p>
+</div>
+<p class="date"><%= post.created_at.strftime("%A, %B %D") %></p>
   </div>
+</div>
+</div>
 <% end %>

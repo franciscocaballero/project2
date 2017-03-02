@@ -2,64 +2,59 @@
 <html>
   <head>
     <link rel="icon" type="image/png" href="/assets/favicon.png">
-
-    <title>Style Blog</title>
-<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet">
+      <title>Style Blog</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <div class ="drop-down">
+      <img src="//cdn.shopify.com/s/files/1/0094/2252/t/44/assets/icon-hamburger.svg?13828199814961171024">
+</div>
   </head>
 
-  <body>
-<% if notice %>
-<%= notice %>
-<% end %>
-<% if alert %>
-<%= alert %>
-<% end %>
+ <body>
+    <% if notice %>
+    <%= notice %>
+      <% end %>
+      <% if alert %>
+      <%= alert %>
+      <% end %>
 
-  <h1><a id="homelink" href="/posts"> The Style Blog </a></h1>
-</header>
-<% if notice %>
+ <header><a id="homelink" href="/posts"> The Style Blog </a>
+
+  <!-- <div class= "nav">
+ <a href="#">About</a>
+ <a href="#">Contact</a>
+ <a href="#">Watches</a>
+ </div>
+</header> -->
+
+   <% if notice %>
 <p class="notice"><%= notice %></p>
-<% elsif alert %>
+   <% elsif alert %>
 
-<p class="alert"><%= alert %></p>
-<% end %>
-<nav>
-<a href="#">About</a>
-<a href="#">Contact</a>
-<a href="#">Watches</a>
-</nav>
+   <p class="alert"><%= alert %></p>
+   <% end %>
 
+<main>
+  <div class="sidebar-one">
+  <h2>NEWSLETTER</h2>
+  <% if cookies[:saved_lead] %>
+      Thanks for signing up!
+      <% else %>
+  <%= form_for Email.new do |f| %>
+    <%= f.email_field :email, placeholder: "Email" %>
+    <%= f.submit %>
+    <% end %>
+    <% end %>
+  </div>
+  <%= yield %>
+</main>
 
-<div id="newsletter">
-<h2>NEWSLETTER</h2>
-<% if cookies[:saved_lead] %>
-Thanks for signing up!
-<% else %>
-<%= form_for Email.new do |f| %>
-  <%= f.email_field :email, placeholder: "Email" %>
-  <%= f.submit %>
-  <% end %>
-  <% end %>
+<div class="footer">
+ hello
 </div>
+</body>
 
 
-<article>
-<%= yield %>
-</article>
- <!-- <footer id="main footer">
- <p class="copyright">&copy2017 Style blog</p>
-   <a href="https://twitter.com/ciscocaballero" class="twitter-follow-button" data-show-count="false">Follow @ciscocaballero</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-   <style>.ig-b- { display: inline-block; }
- .ig-b- img { visibility: hidden; }
- .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
- .ig-b-32 { width: 32px; height: 32px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-32.png) no-repeat 0 0; }
- @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
- .ig-b-32 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-32@2x.png); background-size: 60px 178px; } }</style>
- <a href="https://www.instagram.com/ciscocaballero/?ref=badge" class="ig-b- ig-b-32"><img src="//badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" /></a>
-
- </footer> -->
- </body>
 </html>
