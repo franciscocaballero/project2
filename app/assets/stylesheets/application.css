@@ -7,16 +7,68 @@
 #homelink {
   font-family: 'Mr Dafoe', cursive;
   font-size: 60px;
+  border-bottom: 1px solid black;
 }
 .drop-down{
-
-  margin-top: 20px;
-  margin-right: 10px;
+ display: flex;
+ flex-direction:
 }
 .post_header{
   text-align: center;
 
 }
+
+/* Initial menu and you can insert url image into background*/
+.menu {
+background: #eee;
+left: -285px;
+height:100%;
+position: fixed;
+width: 285px;
+
+}
+
+.menu ul{
+  border-top: 1px solid #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom:1px solid #fff;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 30px;
+  padding-top: 3px;
+}
+
+.menu a{
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.icon-close{
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.icon-menu {
+padding-left: 20px;
+padding-top: 20px;
+cursor: pointer;
+padding-bottom:20px;
+font-family: sans-serif;
+font-size:23px;
+letter-spacing: 1px;
+}
+
+.header{
+  border-bottom: 1px solid black;
+}
+
 .column-layout {
  max-width: 1300px;
  background-color: #FFF;
@@ -33,7 +85,7 @@
 }
 .sidebar-one {
 position: fixed;
-right: 0px;
+right: 5px;
 flex: 1;
 margin-top: 40px;
 display: flex;
@@ -79,12 +131,12 @@ header{
   margin-right: 40px;
 
 }*/
-.nav{
+/*.nav{
   float: right;
   margin-top: 20px;
   margin-right: 10px;
   justify-content: space-between;
-}
+}*/
 a{
   color: black;
   font-family: system-ui;
@@ -92,7 +144,8 @@ a{
 }
 
 textarea {
-  min-height: 20em
+  width: : 50em;
+  min-height: 30em;
 }
 
 
@@ -124,4 +177,5 @@ body{
   font-size: 25px;
   margin-left: -8px;
   margin-right: -10px;
+  font-weight: 50px;
 }

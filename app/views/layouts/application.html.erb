@@ -7,10 +7,69 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <div class ="drop-down">
-      <img src="//cdn.shopify.com/s/files/1/0094/2252/t/44/assets/icon-hamburger.svg?13828199814961171024">
+
+<body>
+<div class = "menu">
+  <!--closing icon for menu, replace with X image or something else-->
+
+  <div class="icon-close">
+    <img src="//cdn.shopify.com/s/files/1/0094/2252/t/44/assets/icon-hamburger.svg?13828199814961171024">
+  </div>
+
+<!-- Menu -->
+<ul>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Blog</a></li>
+  <li><a href="#">Help</a></li>
+  <li><a href="#">Contact</a></li>
 </div>
-  </head>
+
+<!--hamburger with new class name-->
+
+<div class ="icon-menu">
+  <i class="fa fa-bars"></i>
+    <img src="//cdn.shopify.com/s/files/1/0094/2252/t/44/assets/icon-hamburger.svg?13828199814961171024">
+Menu
+</div>
+</body>
+
+<!--    JQUERY javascript     -->
+<script>
+var main = function() {
+/*pushing the body and navigation over 285px*/
+$(.icon-menu).click(function()
+$('menu').animate({
+  left: "0px"
+}, 200);
+
+$('body').animate({
+  left: "-285px"
+}, 200);
+
+)};
+
+/*pushing back*/
+$('.icon-close').click(function(){
+$('.menu').animate({
+  left: "-285px"
+}, 200);
+  $('body').animate({
+    left: "0px"
+  }, 200);
+});
+
+
+};
+
+
+$(document).ready(main);
+</script>
+
+
+
+
+<!-- Where JQUERY JS ENDS -->
+
 
  <body>
     <% if notice %>
@@ -19,9 +78,9 @@
       <% if alert %>
       <%= alert %>
       <% end %>
-
+<div class= "header_banner">
  <header><a id="homelink" href="/posts"> The Style Blog </a>
-
+<div>
   <!-- <div class= "nav">
  <a href="#">About</a>
  <a href="#">Contact</a>
@@ -47,12 +106,20 @@
     <%= f.submit %>
     <% end %>
     <% end %>
+<br>
+<h2>About Us</h2>
+<p>Fashion is temporary and expensive. Style is timeless and affordable.
+  we try to  help you work the retail system so that you can be comfortable,
+  look sharp, and save money
+</p>
+
   </div>
   <%= yield %>
 </main>
 
 <div class="footer">
- hello
+ by Francisco Caballero
+  Genesis Framework | Disclosures: Privacy and Affiliates, Gilt.com, FTC | Advertising
 </div>
 </body>
 
